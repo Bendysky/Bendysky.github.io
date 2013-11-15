@@ -1,0 +1,46 @@
+.main_style
+{
+	width:800px;
+	min-height:700px;
+	margin:auto;
+	background:#222333;
+}
+div#navlayer
+{
+	width:100%;
+	min-height:100px;
+	margin:auto;
+	background:blue;
+}
+div#photolayer
+{
+	width:100%;
+	min-height:300px;
+	margin:auto;
+	background:#aa0033;
+	margin-top:10px;
+}
+div#bloglayer
+{
+	width:100%;
+	min-height:300px;
+	margin:auto;
+	background:#ff0033;
+	margin-top:10px;
+}
+div#happylayer
+{
+	width:100%;
+	min-height:200px;
+	margin:auto;
+	background:#110033;
+	margin-top:10px;
+}
+div#bottomlayer
+{
+	width:100%;
+	min-height:20px;
+	margin:auto;
+	background:#660033;
+	margin-top:10px;
+}
