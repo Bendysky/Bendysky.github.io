@@ -1,30 +1,124 @@
+body
+{
+	background:url("../images/back.jpg");
+	background-repeat:repeat-y;
+	clear:both;
+}
+
 .main_style
 {
 	width:800px;
 	min-height:700px;
 	margin:auto;
-	background:#222333;
+	/*background:#FFA500;*/
+	position:relative;
+	opacity:0.5;
 }
 div#navlayer
 {
 	width:100%;
-	min-height:100px;
-	margin:auto;
-	background:blue;
+	height:110px;
+	/*margin:auto;*/
+	/*background:#FAFAFA;*/
 }
+.prsphoto
+{
+	width:60px;
+	height:60px;
+	background:url("../images/photo.jpg");
+	position:absolute;
+	/*margin-left:3%;
+	margin-top:1%;
+	float:left;*/
+	margin-top:3%;
+	left:5%;
+	border:5px solid #97FFFF;
+}
+.usernamediv
+{
+	width:13%;
+	height:10%;
+	/*background:blue;*/
+	/*float:left;*/
+	position:absolute;
+	top:5%;
+	left:15%;
+}
+.username
+{
+	font-size:20px;
+	margin-top:3%;
+	color:#BFEFFF;
+}
+.navbar
+{
+	width:40%;
+	height:60px;
+	/*background:#AEEEEE;*/
+	float:right;
+	margin-top:20px;
+	
+}
+.homebtn
+{
+	width:60px;
+	height:60px;
+	float:left;
+	margin-left:20px;
+	background:url("../images/home.png");
+}
+.blogbtn
+{
+	width:60px;
+	height:60px;
+	float:left;
+	margin-left:20px;
+	background:url("../images/blog.png");
+}
+.happybtn
+{
+	width:60px;
+	height:60px;
+	float:left;
+	margin-left:20px;
+	background:url("../images/happy.png");
+}
+.photobtn
+{
+	width:60px;
+	height:60px;
+	float:left;
+	margin-left:20px;
+	background:url("../images/photobtn.png");
+}
+.navbottom
+{
+	width:100%;
+	height:30px;
+	float:left;
+	background:url("../images/navbottom.jpg");
+	margin-top:5px;
+}
+/*div#navlayer p
+{
+	position:absolute;
+	font-size:20px;
+	margin-left:30%;
+	color:red;
+}*/
 div#photolayer
 {
 	width:100%;
 	min-height:300px;
-	margin:auto;
-	background:#aa0033;
+	/*margin:auto;*/
+	background:#7A7A7A;
 	margin-top:10px;
 }
 div#bloglayer
 {
 	width:100%;
 	min-height:300px;
-	margin:auto;
+	/*margin:auto;*/
 	background:#ff0033;
 	margin-top:10px;
 }
@@ -32,8 +126,8 @@ div#happylayer
 {
 	width:100%;
 	min-height:200px;
-	margin:auto;
-	background:#110033;
+	/*margin:auto;*/
+	background:#00F5FF;
 	margin-top:10px;
 }
 div#bottomlayer
@@ -44,3 +138,4 @@ div#bottomlayer
 	background:#660033;
 	margin-top:10px;
 }
+
