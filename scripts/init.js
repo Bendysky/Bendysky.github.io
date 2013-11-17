@@ -13,5 +13,5 @@ $(function(){
 	Lan = language[global.lan];
 	//initpage();
 	modstruct = Module;
-	InitNav();
+	HomePage();
 });

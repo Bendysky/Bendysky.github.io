@@ -11,7 +11,26 @@ var Module = {
 			]},
 			{type:"div",name:"navbottomdiv",class:"navbottom"}
 	],
-	"photo":[],
-	"blog":[],
-	"happy":[]
+		
+	"photo":[{type:"div",name:"photoleft",class:"photoleft"},
+			{type:"div",name:"photomid",class:"photomid"},
+			{type:"div",name:"photoright",class:"photoright"}],
+				
+	"blog":[{type:"div",name:"bloglist",class:"bloglist",tags:[
+				{type:"p",name:"listname",class:"listname"}
+			]},
+			{type:"div",name:"blogcontent",class:"blogcontent"}
+	],
+	"happy":[{type:"div",name:"happylist",class:"happylist",tags:[
+			{type:"p",name:"happyname",class:"happyname"}
+			]},
+			{type:"div",name:"happycontent",class:"happycontent",tags:[
+			{type:"div",name:"happytext",class:"happytext"},
+			{type:"div",name:"happyimg",class:"happyimg"}
+			]}
+	],
+	"bottom":[{type:"div",name:"bottominfo",class:"bottominfo",tags:[
+			{type:"p",name:"email",class:"email"}
+			]}
+	]
 };

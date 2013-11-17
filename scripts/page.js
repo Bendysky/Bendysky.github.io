@@ -18,7 +18,7 @@ function CreateElement(tag)
 {
 	var tagparm = tag.split(":");
 	var _this = this;
-	this.entity =  tagparm>1?CreateByTag(tagparm[0]):CreateByTag(tag);
+	this.entity =  (tagparm.length>1)?CreateByTag(tagparm[0]):CreateByTag(tag);
 	this.SetID = function(id){
 		_this.entity.setAttribute("id",id); 
 	}
