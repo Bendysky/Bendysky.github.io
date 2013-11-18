@@ -1,36 +1,36 @@
 var Module = {
-	"nav":[{type:"div",name:"photodiv",class:"prsphoto"},
-			{type:"div",name:"userdiv",class:"usernamediv",tags:[
-				{type:"p",name:"username",class:"username"}
+	"nav":[{type:"div",name:"photodiv",classinfo:"prsphoto"},
+			{type:"div",name:"userdiv",classinfo:"usernamediv",tags:[
+				{type:"img",name:"username",classinfo:"username",src:"./images/name.png"}
 			]},
-			{type:"div",name:"navbardiv",class:"navbar",tags:[
-				{type:"div",name:"homebtn",class:"homebtn"},
-				{type:"div",name:"blogbtn",class:"blogbtn"},
-				{type:"div",name:"happybtn",class:"happybtn"},
-				{type:"div",name:"photobtn",class:"photobtn"}
+			{type:"div",name:"navbardiv",classinfo:"navbar",tags:[
+				{type:"div",name:"homebtn",classinfo:"homebtn"},
+				{type:"div",name:"blogbtn",classinfo:"blogbtn"},
+				{type:"div",name:"happybtn",classinfo:"happybtn"},
+				{type:"div",name:"photobtn",classinfo:"photobtn"}
 			]},
-			{type:"div",name:"navbottomdiv",class:"navbottom"}
+			{type:"div",name:"navbottomdiv",classinfo:"navbottom"}
 	],
 		
-	"photo":[{type:"div",name:"photoleft",class:"photoleft"},
-			{type:"div",name:"photomid",class:"photomid"},
-			{type:"div",name:"photoright",class:"photoright"}],
+	"photo":[{type:"div",name:"photoleft",classinfo:"photoleft"},
+			{type:"div",name:"photomid",classinfo:"photomid"},
+			{type:"div",name:"photoright",classinfo:"photoright"}],
 				
-	"blog":[{type:"div",name:"bloglist",class:"bloglist",tags:[
-				{type:"p",name:"listname",class:"listname"}
+	"blog":[{type:"div",name:"bloglist",classinfo:"bloglist",tags:[
+				{type:"p",name:"listname",classinfo:"listname"}
 			]},
-			{type:"div",name:"blogcontent",class:"blogcontent"}
+			{type:"div",name:"blogcontent",classinfo:"blogcontent"}
 	],
-	"happy":[{type:"div",name:"happylist",class:"happylist",tags:[
-			{type:"p",name:"happyname",class:"happyname"}
+	"happy":[{type:"div",name:"happylist",classinfo:"happylist",tags:[
+			{type:"p",name:"happyname",classinfo:"happyname"}
 			]},
-			{type:"div",name:"happycontent",class:"happycontent",tags:[
-			{type:"div",name:"happytext",class:"happytext"},
-			{type:"div",name:"happyimg",class:"happyimg"}
+			{type:"div",name:"happycontent",classinfo:"happycontent",tags:[
+			{type:"div",name:"happytext",classinfo:"happytext"},
+			{type:"div",name:"happyimg",classinfo:"happyimg"}
 			]}
 	],
-	"bottom":[{type:"div",name:"bottominfo",class:"bottominfo",tags:[
-			{type:"p",name:"email",class:"email"}
+	"bottom":[{type:"div",name:"bottominfo",classinfo:"bottominfo",tags:[
+			{type:"p",name:"email",classinfo:"email"}
 			]}
 	]
 };

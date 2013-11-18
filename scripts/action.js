@@ -5,8 +5,8 @@ function CreateModule(modname,moddiv)
 	for(i=0;i<mod.length;i++)
 	{
 		var ele = new CreateElement(mod[i].type);
-		if(mod[i].class)
-			ele.SetClass(mod[i].class);
+		if(mod[i].classinfo)
+			ele.SetClass(mod[i].classinfo);
 		if(mod[i].name)
 		{
 			ele.SetName(mod[i].name);
@@ -17,8 +17,8 @@ function CreateModule(modname,moddiv)
 			for(var j=0;j<mod[i].tags.length;j++)
 			{
 				var tag = new CreateElement(mod[i].tags[j].type);
-				if(mod[i].tags[j].class)
-					tag.SetClass(mod[i].tags[j].class);
+				if(mod[i].tags[j].classinfo)
+					tag.SetClass(mod[i].tags[j].classinfo);
 				if(mod[i].tags[j].name)
 				{
 					tag.SetName(mod[i].tags[j].name);
@@ -26,6 +26,11 @@ function CreateModule(modname,moddiv)
 				}
 				if(mod[i].tags[j].type == 'p')
 					tag.html(GetString("common",mod[i].tags[j].name));
+				else if(mod[i].tags[j].type == 'img')
+				{
+					if(mod[i].tags[j].src)
+						tag.entity.src = mod[i].tags[j].src;
+				}
 				ele.append(tag);
 			}
 		}
