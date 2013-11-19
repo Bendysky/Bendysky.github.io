@@ -23,7 +23,8 @@ function CreateElement(tag)
 		_this.entity.setAttribute("id",id); 
 	}
 	this.SetClass = function(classname){
-		_this.entity.setAttribute("class",classname); 
+		//_this.entity.setAttribute("class",classname); 
+		_this.entity.className = classname;
 	}
 	this.SetName = function(name){
 		_this.entity.setAttribute("name",name);
