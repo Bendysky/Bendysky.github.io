@@ -12,26 +12,51 @@ function CreateModule(modname,moddiv)
 			ele.SetName(mod[i].name);
 			ele.SetID(mod[i].name);
 		}
-		if(mod[i].tags)
+		if(mod[i].pans)
 		{
-			for(var j=0;j<mod[i].tags.length;j++)
+			var panele = mod[i].pans;
+			for(var j=0;j<panele.length;j++)
 			{
-				var tag = new CreateElement(mod[i].tags[j].type);
-				if(mod[i].tags[j].classinfo)
-					tag.SetClass(mod[i].tags[j].classinfo);
-				if(mod[i].tags[j].name)
+				//create pans module
+				var pan = new CreateElement(panele[j].type);
+				if(panele[j].classinfo)
+					pan.SetClass(panele[j].classinfo);
+				if(panele[j].name)
 				{
-					tag.SetName(mod[i].tags[j].name);
-					tag.SetID(mod[i].tags[j].name);
+					pan.SetName(panele[j].name);
+					pan.SetID(panele[j].name);
 				}
-				if(mod[i].tags[j].type == 'p')
-					tag.html(GetString("common",mod[i].tags[j].name));
-				else if(mod[i].tags[j].type == 'img')
+				if(panele[j].type == 'p')
+					pan.html(GetString("common",panele[j].name));
+				else if(panele[j].type == 'img')
 				{
-					if(mod[i].tags[j].src)
-						tag.entity.src = mod[i].tags[j].src;
+					if(panele[j].source)
+						pan.entity.src = panele[j].source;
 				}
-				ele.append(tag);
+				//create tags module
+				if(panele[j].tags)
+				{
+					for(var m=0;m<panele[j].tags.length;m++)
+					{
+						var tag = new CreateElement(panele[j].tags[m].type);
+						if(panele[j].tags[m].classinfo)
+							tag.SetClass(panele[j].tags[m].classinfo);
+						if(panele[j].tags[m].name)
+						{
+							tag.SetName(panele[j].tags[m].name);
+							tag.SetID(panele[j].tags[m].name);
+						}
+						if(panele[j].tags[m].type == "p")
+							tag.html(GetString("common",panele[j].tags[m].name));
+						else if(panele[j].tags[m].type == "img")
+						{
+							if(panele[j].tags[m].source)
+								tag.entity.src = panele[j].tags[m].source;
+						}
+						pan.append(tag);
+					}
+				}
+				ele.append(pan);
 			}
 		}
 		moddiv.appendChild(ele.entity);
@@ -79,23 +104,84 @@ function CreateOneBlog(blogcontent)
 			blogdiv.append(img);
 		}
 	}
-	blogcontent.content = blogdiv;
+	return blogdiv;
 }
-function InitNav()
+function InitNavTop()
 {
-	/*var image = new CreateElement("DIV:prsphoto");
-	//var test = document.createElement("div")
-	navlayer.appendChild(image.entity);
-	var namediv = new CreateElement("DIV:usernamediv");
-	var name = new CreateElement("p:username");
-	name.html(GetString("common", "name"));
-	namediv.append(name);
-	navlayer.appendChild(namediv.entity);*/
-	CreateModule(modstruct["nav"],navlayer);
+    CreateModule(modstruct["navtop"],navtop);
+    CreateModule(modstruct["navbar"],navlayer);
+    GetByID("homepage").style.color = "black";
+    var menu = GetByID("menudiv").childNodes;
+    for(var i=1;i<menu.length;i=i+2)
+    {
+		menu[i].onmouseover = function(){
+			this.childNodes[0].style.color = "black";		
+		};
+		menu[i].onmouseout = function(){
+			if(global.CurrentModule != this.childNodes[0].id)
+				this.childNodes[0].style.color = "white";
+		};
+    }
 }
+/*function InitNav()
+{
+	CreateModule(modstruct["nav"],navlayer);
+    var nav = GetByID("navbardiv").childNodes;
+    for(var i=0;i<nav.length;i++)
+    {
+        nav[i].onmouseup = nav[i].onmouseover =  function(){
+            this.style.opacity = "0.6";
+            if(global.Browser.indexOf("msie 6.0"))
+                this.style.filter = "alpha(opacity=60)";
+            //this.style.cursor = "pointer";
+        }
+        nav[i].onmouseout = function(){
+            this.style.opacity = "1";
+            if(global.Browser.indexOf("msie 6.0"))
+                this.style.filter = "alpha(opacity=100)";
+        }
+       nav[i].onmousedown = function(){
+            this.style.opacity = "0.3";
+            if(global.Browser.indexOf("msie 6.0"))
+                this.style.filter = "alpha(opacity=30)";
+            //this.style.cursor = "pointer";
+        }
+    }
+}*/
 function InitPhoto()
 {
 	CreateModule(modstruct["photo"], photolayer);
+    /*var timeindex = 10;
+    var imgindex = 0;
+    var img = GetByID("midimg");
+    var imglist = Lan.imagelist;
+    var flag = 0;
+    function LoopImage()
+    {
+        if(global.CurrentModule != "homepage")
+            clearInterval(time);
+        if(flag == 1)
+            ++timeindex;
+        else
+            --timeindex;
+        if(timeindex <= 0 || timeindex >= 10)
+        {
+            //timeindex = 10;
+            flag++;
+            if(flag >= 2)
+            {
+                if(imgindex >= imglist.length)
+                    imgindex = 0;
+                img.src = imglist[imgindex];
+                flag = 0;
+                imgindex++;
+            }
+        }
+        img.style.opacity = timeindex/10;
+        if(global.Browser.indexOf("msie"))
+            img.style.filter = "alpha(opacity="+timeindex*10+")";       
+    }
+    var time = setInterval(LoopImage,300);*/
 }
 function InitBLog()
 {
@@ -103,30 +189,36 @@ function InitBLog()
 	var bloglist = Lan.blog;
 	for(var i=0;i<bloglist.length;i++)
 	{
-		CreateOneBlog(bloglist[i]);
-		GetByID("blogcontent").appendChild(bloglist[i].content.entity);
+		var oneblog = CreateOneBlog(bloglist[i]);
+		GetByID("blogcontent").appendChild(oneblog.entity);
 	}
 }
 function InitHappy()
 {
 	CreateModule(modstruct["happy"],happylayer);
 	var happylist = Lan.happy;
-	CreateOneBlog(happylist[0]);
-	GetByID("happytext").appendChild(happylist[0].content.entity);
-	CreateOneBlog(happylist[1]);
-	GetByID("happyimg").appendChild(happylist[1].content.entity);
-	GetByID("happyimg1").setAttribute("class","imgtitle");
+	var happy = CreateOneBlog(happylist[0]);
+	GetByID("happyleft").appendChild(happy.entity);
+	happy = CreateOneBlog(happylist[1]);
+	GetByID("happyright").appendChild(happy.entity);
 }
 function InitBottom()
 {
 	CreateModule(modstruct["bottom"],bottomlayer);
 	
 }
+
 function HomePage()
 {
+    InitPhoto();
+    InitBLog();
+    InitHappy();
+    InitBottom();
+    /*if(global.GetBrowserVer() == 6.0)
+        GetByTag("body")[0].style.background = "#F0F0F0";
 	InitNav();
 	InitPhoto();
 	InitBLog();
 	InitHappy();
-	InitBottom();
+	InitBottom();*/
 }

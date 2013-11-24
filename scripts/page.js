@@ -1,6 +1,4 @@
-var global ={
-	lan:"CH"
-};
+
 //$ = global;
 function GetString(module,str)
 {
@@ -13,6 +11,10 @@ function CreateByTag(tag)
 function GetByID(idval)
 {
 	return document.getElementById(idval);
+}
+function GetByTag(tag)
+{
+    return document.getElementsByTagName(tag);
 }
 function CreateElement(tag)
 {

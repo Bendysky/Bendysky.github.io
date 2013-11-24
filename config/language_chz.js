@@ -2,9 +2,14 @@
 language.CH = {
 	common:{
 		"username"		:"DreamSky",
+        		"motto"         		:"O(∩_∩)O~~愿幸福之光，普照此岸的信仰，护佑彼岸的路途", 
+		"homepage"		:"主页",
+		"blogpage"		:"博客",
+		"happypage"		:"轻松一刻",
+		"photopage"		:"照片集",
 		"listname"		:"Blog",
-		"happyname"		:"Happy",
-		"email"			:"Email:beny.liu@qq.com"
+		"email"			:"Email : beny.liu@qq.com",
+		"mottobottom"	:"人群中擦肩遇過多少動人的容顏，心中不能忘記只有你微笑的雙眼"
 	},
 	blog:[{title:"擦肩而过的散场",type:"text",content:[
 		"那一天",
@@ -34,11 +39,12 @@ language.CH = {
 		"这一生将把你珍藏心底"
 		]}
 	],
-	happy:[{title:"团结的力量",type:"text",content:[
-		"英语课，老师检查作业，全班的那一页纸都没有任何字迹.",
-		"老师转了一圈后，弱弱的问了句：我真的没有布置作业么？",
-		"然后悻倖的回讲台了。",
-		"同志们！这就是团结的力量啊！"
+    imagelist:["./images/h1.jpg","./images/h2.jpg","./images/h3.jpg","./images/h4.jpg","./images/h5.jpg",
+            "./images/h6.jpg","./images/middle.jpg"],
+	happy:[{title:"泡面",type:"text",content:[
+		"弟弟喜欢吃泡面。 妈妈：“妈妈跟你说，泡面真的不是什么好东西，你爸爸公司有一个年轻的小姐，为了都把钱存下来寄回家，所以早上吃泡面，中午吃泡面，晚上吃泡面。天天吃泡面，结果三个月以后她死了！” 弟弟大惊失色：“真的假的？” 真的喔。 那她是怎么死的？” 这个啊……买泡面时出车祸…….",
+		]},
+		{title:"作业",type:"text",content:["每个假期快结束时，我都有一堆作业没写<br>于是，打电话给同学甲：作业写完没？快，抄一下！<br>甲做迷茫状：老师留作业了吗？<br>果断挂断<br>打给小乙：作业写完没？快，抄一下！<br>乙一脸愤慨:坚决不做亡国奴！！<br>我：....................................！！<br>不死心，再打！<br>丙：放弃吧！孩纸！！我才不写呢！！！！<br>那一刻，我顿时觉得，我找到了组织...........暗下决心：我也不写！！！<br>等到交作业时，LZ才明白.....神马都TMD浮云.............<br>那群2货们一个比一个悠闲.......<br>都TNND早写完了！"
 		]},
 		{title:"你要干嘛？",type:"img",name:"happyimg1",src:"./images/happy1.jpg"}
 	]

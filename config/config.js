@@ -1,7 +1,16 @@
 var Module = {
-	"nav":[{type:"div",name:"photodiv",classinfo:"prsphoto"},
+    "navtop":[{type:"div",name:"topbar",classinfo:"topbar",pans:[
+    			{type:"div",name:"navname",classinfo:"navname"},
+    			{type:"div",name:"mottodiv",classinfo:"mottodiv",tags:[
+					{type:"p",name:"motto",classinfo:"motto"}
+    				]}
+				]}/*,
+               {type:"div",name:"mottodiv",classinfo:"mottodiv",tags:
+                [{type:"p",name:"motto",classinfo:"motto"}]
+            }*/],
+	"navbar":[/*{type:"div",name:"photodiv",classinfo:"prsphoto"},
 			{type:"div",name:"userdiv",classinfo:"usernamediv",tags:[
-				{type:"img",name:"username",classinfo:"username",src:"./images/name.png"}
+				{type:"img",name:"username",classinfo:"username",source:"./images/name.png"}
 			]},
 			{type:"div",name:"navbardiv",classinfo:"navbar",tags:[
 				{type:"div",name:"homebtn",classinfo:"homebtn"},
@@ -9,11 +18,53 @@ var Module = {
 				{type:"div",name:"happybtn",classinfo:"happybtn"},
 				{type:"div",name:"photobtn",classinfo:"photobtn"}
 			]},
-			{type:"div",name:"navbottomdiv",classinfo:"navbottom"}
+			{type:"div",name:"navbottomdiv",classinfo:"navbottom"}*/
+			{type:"div",name:"menudiv",classinfo:"menudiv",pans:[
+				{type:"div",name:"space1",classinfo:"space"},
+	            {type:"div",name:"homediv",classinfo:"navbardiv",tags:[
+	                {type:"p",name:"homepage",classinfo:"navbtn"}
+	           ]},
+	            {type:"div",name:"space2",classinfo:"space"},
+	            {type:"div",name:"blogdiv",classinfo:"navbardiv",tags:[
+	                {type:"p",name:"blogpage",classinfo:"navbtn"}
+	           ]},
+	            {type:"div",name:"space3",classinfo:"space"},
+	            {type:"div",name:"happydiv",classinfo:"navbardiv",tags:[
+	                {type:"p",name:"happypage",classinfo:"navbtn"}
+	           ]},
+	            {type:"div",name:"space4",classinfo:"space"},
+	            {type:"div",name:"photodiv",classinfo:"navbardiv",tags:[
+	                {type:"p",name:"photopage",classinfo:"navbtn"}
+	           ]},
+	           {type:"div",name:"space5",classinfo:"space"}				
+				]}
 	],
-		
-	"photo":[{type:"div",name:"photoleft",classinfo:"photoleft"},
+	"photo":[{type:"div",name:"photocontentdiv",classinfo:"photodiv",pans:[
+			{type:"div",name:"photoleft",classinfo:"photoleft"},
 			{type:"div",name:"photomid",classinfo:"photomid"},
+			{type:"div",nmae:"photoright",classinfo:"photoright"}
+		]}
+	],
+	"blog":[{type:"div",name:"blogcontentdiv",classinfo:"blogdiv",pans:[
+			{type:"div",name:"blogcontent",classinfo:"blogcontent"}
+		]}
+	],
+	"happy":[{type:"div",name:"happycontentdiv",classinfo:"happydiv",pans:[
+			{type:"div",name:"happyleft",classinfo:"happyleft"},
+			{type:"div",name:"happyright",classinfo:"happyright"}
+		]}
+	],
+	"bottom":[{type:"div",name:"bottomdiv",classinfo:"bottomdiv",pans:[
+			{type:"div",name:"emaildiv",classinfo:"emaildiv",tags:[
+				{type:"p",name:"email",classinfo:"email"}
+			]},
+			{type:"div",name:"mottobottomdiv",classinfo:"mottobottomdiv"}
+		]}
+	]
+	/*"photo":[{type:"div",name:"photoleft",classinfo:"photoleft"},
+			{type:"div",name:"photomid",classinfo:"photomid",tags:[
+	            {type:"img",name:"midimg",classinfo:"midimg",source:"./images/middle.jpg"}
+            ]},
 			{type:"div",name:"photoright",classinfo:"photoright"}],
 				
 	"blog":[{type:"div",name:"bloglist",classinfo:"bloglist",tags:[
@@ -32,5 +83,5 @@ var Module = {
 	"bottom":[{type:"div",name:"bottominfo",classinfo:"bottominfo",tags:[
 			{type:"p",name:"email",classinfo:"email"}
 			]}
-	]
+	]*/
 };
