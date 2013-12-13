@@ -3,6 +3,10 @@ var Module = {
     			{type:"div",name:"navname",classinfo:"navname"},
     			{type:"div",name:"mottodiv",classinfo:"mottodiv",tags:[
 					{type:"p",name:"motto",classinfo:"motto"}
+    				]},
+    			{type:"div",name:"timeline",classinfo:"timeline",tags:[
+					{type:"div",name:"timename",classinfo:"timename"},
+					{type:"div",name:"timecontent",classinfo:"timecontent"}
     				]}
 				]}/*,
                {type:"div",name:"mottodiv",classinfo:"mottodiv",tags:
@@ -21,19 +25,19 @@ var Module = {
 			{type:"div",name:"navbottomdiv",classinfo:"navbottom"}*/
 			{type:"div",name:"menudiv",classinfo:"menudiv",pans:[
 				{type:"div",name:"space1",classinfo:"space"},
-	            {type:"div",name:"homediv",classinfo:"navbardiv",tags:[
+	            {type:"a",link:"./index.html",name:"homediv",classinfo:"navbardiv",tags:[
 	                {type:"p",name:"homepage",classinfo:"navbtn"}
 	           ]},
 	            {type:"div",name:"space2",classinfo:"space"},
-	            {type:"div",name:"blogdiv",classinfo:"navbardiv",tags:[
+	            {type:"a",link:"./blogpage.html",name:"blogdiv",classinfo:"navbardiv",tags:[
 	                {type:"p",name:"blogpage",classinfo:"navbtn"}
 	           ]},
 	            {type:"div",name:"space3",classinfo:"space"},
-	            {type:"div",name:"happydiv",classinfo:"navbardiv",tags:[
+	            {type:"a",link:"./happypage.html",name:"happydiv",classinfo:"navbardiv",tags:[
 	                {type:"p",name:"happypage",classinfo:"navbtn"}
 	           ]},
 	            {type:"div",name:"space4",classinfo:"space"},
-	            {type:"div",name:"photodiv",classinfo:"navbardiv",tags:[
+	            {type:"a",link:"./photopage.html",name:"photodiv",classinfo:"navbardiv",tags:[
 	                {type:"p",name:"photopage",classinfo:"navbtn"}
 	           ]},
 	           {type:"div",name:"space5",classinfo:"space"}				
@@ -60,7 +64,59 @@ var Module = {
 			]},
 			{type:"div",name:"mottobottomdiv",classinfo:"mottobottomdiv"}
 		]}
-	]
+	],
+	"blogtag":[{type:"div",name:"noticediv",classinfo:"noticediv",pans:[
+			{type:"div",name:"noticetitle",classinfo:"noticetitle",tags:[
+				{type:"p",name:"notice",classinfo:"notice"}
+			]},
+			{type:"div",name:"yeardata",classinfo:"yeardata"},
+			{type:"div",name:"year",classinfo:"timeword"},
+			{type:"div",name:"monthdata",classinfo:"monthdata"},
+			{type:"div",name:"month",classinfo:"timeword"},
+			{type:"div",name:"daydata",classinfo:"daydata"},
+			{type:"div",name:"day",classinfo:"timeword"},
+			{type:"div",name:"weekdata",classinfo:"weekdata"},
+			{type:"div",name:"hourdata",classinfo:"hourdata"},
+			{type:"div",name:"hour",classinfo:"hour"},
+			{type:"div",name:"minutedata",classinfo:"minutedata"},
+			{type:"div",name:"minute",classinfo:"minute"},
+			{type:"div",name:"divider",classinfo:"divider"}
+		]},
+			{type:"div",name:"tagdiv",classinfo:"tagdiv",pans:[
+			{type:"div",name:"taglistname",classinfo:"taglistname"},
+			{type:"div",name:"tag1div",classinfo:"taglistdiv",tags:[
+				{type:"p",name:"gossip",classinfo:"tagname"},
+				{type:"p",name:"gossipnum",classinfo:"tagnumber"}
+			]},
+		    {type:"div",name:"tag2div",classinfo:"taglistdiv",tags:[
+				{type:"p",name:"embeddedsoft",classinfo:"tagname"},
+				{type:"p",name:"embeddedsoftnum",classinfo:"tagnumber"}
+			]},
+			{type:"div",name:"tag3div",classinfo:"taglistdiv",tags:[
+				{type:"p",name:"webdesign",classinfo:"tagname"},
+				{type:"p",name:"webdesignnum",classinfo:"tagnumber"}
+			]},
+			{type:"div",name:"tag4div",classinfo:"taglistdiv",tags:[
+				{type:"p",name:"Linuxdesign",classinfo:"tagname"},
+				{type:"p",name:"Linuxdesignnum",classinfo:"tagnumber"}
+			]},
+			{type:"div",name:"tag5div",classinfo:"taglistdiv",tags:[
+				{type:"p",name:"driverdesign",classinfo:"tagname"},
+				{type:"p",name:"driverdesignnum",classinfo:"tagnumber"}
+			]},
+			{type:"div",name:"tagdivider",classinfo:"divider"}
+		]}
+
+	],
+	"blogtable":[
+		{type:"div",name:"bloglistcontentdiv",classinfo:"bloglist",pans:[
+			{type:"div",name:"currenttagdiv",classinfo:"currenttagdiv",tags:[
+				{type:"div",name:"currenttag",classinfo:"currenttag"},
+				{type:"div",name:"nowtagname",classinfo:"nowtagname"}
+			]},
+			{type:"div",name:"bloglist",classinfo:"bloglist"}
+		]}
+	],
 	/*"photo":[{type:"div",name:"photoleft",classinfo:"photoleft"},
 			{type:"div",name:"photomid",classinfo:"photomid",tags:[
 	            {type:"img",name:"midimg",classinfo:"midimg",source:"./images/middle.jpg"}

@@ -9,6 +9,14 @@ var bottomlayer = GetByID("bottomlayer");
 var global ={
 	lan:"CH",
     CurrentModule:"homepage",
+    gossipnum:0,
+    embeddedsoftnum:0,
+    webdesignnum:0,
+    Linuxdesignnum:0,
+    driverdesignnum:0,
+    photoindex:0,
+    bookindex:0,
+    timeindex:0,
     Browser:navigator.userAgent.toLowerCase(),
     GetBrowserVer:function(){
         if(global.Browser.indexOf("msie") != -1)
@@ -19,15 +27,3 @@ var global ={
         return 0;
     }
 };
-
-function initpage()
-{
-	alert(GetString("common", "name"));
-}
-$(function(){
-	Lan = language[global.lan];
-	//initpage();
-	modstruct = Module;
-	InitNavTop();
-	HomePage();
-});

@@ -1,0 +1,79 @@
+#happymaincontent
+{
+	width:1000px;
+	height:800px;
+	position;relative;
+	margin: 0 auto;
+}
+#happyleft1div
+{
+	width:380px;
+	height:507px;
+	position:relative;
+	float:left;
+	margin-top:20px;
+	margin-left:80px;
+	background:url("../images/miao1.jpg");
+	border-color: #CED7CE;
+    border-style: solid;
+    border-width: 2px 3px 3px 2px;
+}
+#happyright1div
+{
+	width:380px;
+	height:507px;
+	position:relative;
+	float:left;
+	margin-top:20px;
+	margin-left:60px;
+	background:url("../images/miao2.jpg");
+	border-color: #00FFFF;
+    border-style: solid;
+    border-width: 2px 3px 3px 2px;
+}
+#happyleft2div
+{
+	width:380px;
+	height:507px;
+	position:relative;
+	float:left;
+	margin-top:40px;
+	margin-left:80px;
+	background:url("../images/miao3.jpg");
+	border-color: #030303;
+    border-style: solid;
+    border-width: 2px 3px 3px 2px;
+}
+#happyright2div
+{
+	width:380px;
+	height:507px;
+	position:relative;
+	float:left;
+	margin-top:40px;
+	margin-left:60px;
+	background:url("../images/miao4.jpg");
+	border-color: #030303;
+    border-style: solid;
+    border-width: 2px 3px 3px 2px;
+}
+#tips
+{
+	width:300px;
+	height:40px;
+	position:relative;
+	margin: 0 auto;
+	/*left:350px;
+	top:530px;
+	font-size:20px;*/
+}
+#tips span
+{
+	position:relative;
+	font-size:23px;
+	top:-545px;
+	color:green;
+	border-color: blue;
+    border-style: solid;
+    border-width: 2px 3px 3px 2px;
+}

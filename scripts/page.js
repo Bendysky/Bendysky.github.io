@@ -46,6 +46,9 @@ function CreateElement(tag)
 	this.hide = function(){
 		_this.entity.display = "none";
 	}
+	this.SetSource = function(img){
+		_this.entity.src = img;
+	} 
 	if(tagparm[1])
 		_this.SetClass(tagparm[1]);
 }
