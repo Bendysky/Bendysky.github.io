@@ -22,6 +22,9 @@ function CreateBlogTable()
 	var parent = GetByID("bloglist");
 	parent.innerHTML = "";
 	GetByID("nowtagname").innerHTML = Lan.common[this.childNodes[0].id];
+	GetByID("nowtagname").onclick = function(){
+		GetByID("tagdiv").childNodes[global.tagindex].onclick();
+	};
 	for(var i=0;i<num;i++)
 	{
 		if(ele[i].tagtype == this.childNodes[0].id)
@@ -46,6 +49,7 @@ function CreateBlogTable()
 			}
 		}
 	}
+	global.tagindex = parseInt(this.id);
 }
 function CreateBlogList()
 {

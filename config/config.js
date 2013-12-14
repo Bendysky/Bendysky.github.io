@@ -84,23 +84,23 @@ var Module = {
 		]},
 			{type:"div",name:"tagdiv",classinfo:"tagdiv",pans:[
 			{type:"div",name:"taglistname",classinfo:"taglistname"},
-			{type:"div",name:"tag1div",classinfo:"taglistdiv",tags:[
+			{type:"div",name:"1tagdiv",classinfo:"taglistdiv",tags:[
 				{type:"p",name:"gossip",classinfo:"tagname"},
 				{type:"p",name:"gossipnum",classinfo:"tagnumber"}
 			]},
-		    {type:"div",name:"tag2div",classinfo:"taglistdiv",tags:[
+		    {type:"div",name:"2tagdiv",classinfo:"taglistdiv",tags:[
 				{type:"p",name:"embeddedsoft",classinfo:"tagname"},
 				{type:"p",name:"embeddedsoftnum",classinfo:"tagnumber"}
 			]},
-			{type:"div",name:"tag3div",classinfo:"taglistdiv",tags:[
+			{type:"div",name:"3tagdiv",classinfo:"taglistdiv",tags:[
 				{type:"p",name:"webdesign",classinfo:"tagname"},
 				{type:"p",name:"webdesignnum",classinfo:"tagnumber"}
 			]},
-			{type:"div",name:"tag4div",classinfo:"taglistdiv",tags:[
+			{type:"div",name:"4tagdiv",classinfo:"taglistdiv",tags:[
 				{type:"p",name:"Linuxdesign",classinfo:"tagname"},
 				{type:"p",name:"Linuxdesignnum",classinfo:"tagnumber"}
 			]},
-			{type:"div",name:"tag5div",classinfo:"taglistdiv",tags:[
+			{type:"div",name:"5tagdiv",classinfo:"taglistdiv",tags:[
 				{type:"p",name:"driverdesign",classinfo:"tagname"},
 				{type:"p",name:"driverdesignnum",classinfo:"tagnumber"}
 			]},
@@ -116,7 +116,7 @@ var Module = {
 			]},
 			{type:"div",name:"bloglist",classinfo:"bloglist"}
 		]}
-	],
+	]
 	/*"photo":[{type:"div",name:"photoleft",classinfo:"photoleft"},
 			{type:"div",name:"photomid",classinfo:"photomid",tags:[
 	            {type:"img",name:"midimg",classinfo:"midimg",source:"./images/middle.jpg"}

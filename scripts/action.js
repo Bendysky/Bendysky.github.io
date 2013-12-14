@@ -129,7 +129,8 @@ function CreateOneBlog(blogcontent)
 		//tit.append(p);
 		blogdiv.append(tit);
 	}
-	for(var i=0;i<list.length;i++)
+	for(var i=0;i<list.length;i++)
+
 	{
 		var ele = list[i];
 		if(ele.type == "text")
@@ -137,10 +138,10 @@ function CreateOneBlog(blogcontent)
 			var content = new CreateElement("div:"+ele.classinfo);
 			content.html(ele.content);
 		}
-		else if(ele.type == "img")
+		/*else if(ele.type == "img")
 		{
 			
-		}
+		}*/
 		blogdiv.append(content);
 	}
 	return blogdiv;

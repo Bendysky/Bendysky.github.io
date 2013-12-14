@@ -17,6 +17,7 @@ var global ={
     photoindex:0,
     bookindex:0,
     timeindex:0,
+	tagindex:1,
     Browser:navigator.userAgent.toLowerCase(),
     GetBrowserVer:function(){
         if(global.Browser.indexOf("msie") != -1)

@@ -98,7 +98,16 @@ body
     margin-top: 70px;
     position: absolute;
     width: 450px;
-    right:0px;
+    right:20px;
+}
+*html .timeline
+{
+	height: 110px;
+    /*margin-left: 6%;*/
+    margin-top: 70px;
+    position: absolute;
+    width: 450px;
+    right:20px;
 }
 .timename
 {
