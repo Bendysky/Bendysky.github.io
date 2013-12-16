@@ -41,12 +41,13 @@
 {
 	width:684px;
 	height:1148px;
-	position:absolute;
+	position:relative;
 	float:left;
-	left:350px;
+	top:-1038px;
 	margin-top:10px;
 	background:white;
 	border-color: #CED7CE;
+    /*border-image: none;*/
     border-style: solid;
     border-width: 1px 3px 3px 1px;
 } 
